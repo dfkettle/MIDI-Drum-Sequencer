@@ -1,0 +1,28 @@
+#N canvas 916 458 349 236 12;
+#X obj 78 191 send msg-log-r;
+#X obj 78 124 symbol Starting;
+#X obj 110 96 symbol song;
+#X obj 78 60 t b b;
+#X obj 78 158 pack s s;
+#X obj 5 5 cnv 20 30 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 5 25 bng 20 250 50 0 \$0-bang-s \$0-bang-r Start 0 -9 0 10 -257985
+-1 -1;
+#X obj 128 60 outlet;
+#X obj 78 20 r \$0-bang-s;
+#X obj 48 60 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 189 60 send psync-reset;
+#X obj 189 30 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 1 0 4 0;
+#X connect 2 0 4 1;
+#X connect 3 0 1 0;
+#X connect 3 1 2 0;
+#X connect 4 0 0 0;
+#X connect 8 0 7 0;
+#X connect 8 0 3 0;
+#X connect 8 0 9 0;
+#X connect 8 0 10 0;
+#X connect 11 0 10 0;
+#X coords 0 -1 1 1 30 40 2 5 5;

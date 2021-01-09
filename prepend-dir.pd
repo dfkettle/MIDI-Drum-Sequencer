@@ -1,0 +1,21 @@
+#N canvas 139 230 450 312 12;
+#X obj 40 20 inlet;
+#X obj 40 175 pdcontrol;
+#X obj 40 275 outlet;
+#X obj 63 85 symbol \$1;
+#X text 143 47 Creation argument: name of sub-directory;
+#X text 143 15 Prepend current working directory and \; sub-directory
+;
+#X obj 40 52 t b b s;
+#X obj 40 207 pack s s s;
+#X msg 40 232 symbol \$1/\$2/\$3.seq;
+#X msg 40 116 dir 0;
+#X connect 0 0 6 0;
+#X connect 1 0 7 0;
+#X connect 3 0 7 1;
+#X connect 6 0 9 0;
+#X connect 6 1 3 0;
+#X connect 6 2 7 2;
+#X connect 7 0 8 0;
+#X connect 8 0 2 0;
+#X connect 9 0 1 0;

@@ -1,0 +1,25 @@
+#N canvas 35 211 317 236 12;
+#X obj 20 20 inlet note;
+#X obj 112 20 inlet vel;
+#X obj 204 20 inlet chan;
+#X obj 20 191 outlet;
+#X obj 20 168 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 152 91 noteout;
+#X obj 20 93 pack f f f;
+#X obj 90 191 print send-note;
+#X obj 90 167 spigot;
+#X obj 129 139 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 147 137 <== debug;
+#X connect 0 0 6 0;
+#X connect 0 0 5 0;
+#X connect 1 0 5 1;
+#X connect 1 0 6 1;
+#X connect 2 0 5 2;
+#X connect 2 0 6 2;
+#X connect 4 0 3 0;
+#X connect 6 0 4 0;
+#X connect 6 0 8 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 1;

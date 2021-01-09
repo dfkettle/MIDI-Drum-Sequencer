@@ -1,0 +1,59 @@
+#N canvas 643 70 651 432 12;
+#X declare -lib tof;
+#X declare -lib cyclone;
+#X declare -lib ggee;
+#X declare -lib zexy;
+#X declare -lib iemlib;
+#X declare -lib easyflow;
+#X obj 226 202 psync;
+#X obj 226 169 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-258113 -1;
+#X obj 401 107 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-258113 -1;
+#X obj 226 236 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-258113 -1;
+#X obj 226 81 pwait 1000;
+#X text 274 201 <== wait for both inlets to bang;
+#X text 364 264 <== click to edit pattern;
+#X obj 33 126 msg-log;
+#X obj 226 134 pattern Pattern-01;
+#X obj 226 265 pattern Pattern-03;
+#X obj 401 81 pattern Pattern-02;
+#X obj 226 15 song-start;
+#X obj 226 364 song-end;
+#X text 29 22 Drum Sequencer v0.1 \; Copyright (2021) \; David Kettle
+;
+#X obj 401 134 pwait 2000;
+#X obj 401 165 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-258113 -1;
+#X obj 226 107 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-258113 -1;
+#X text 485 133 <== wait 2000 ms.;
+#X obj 226 318 pattern Pattern-01;
+#X obj 226 294 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-258113 -1;
+#N canvas 0 50 341 245 libraries 0;
+#X obj 29 52 declare -lib tof;
+#X obj 29 79 declare -lib cyclone;
+#X text 28 22 Dependencies:;
+#X obj 29 106 declare -lib ggee;
+#X obj 29 133 declare -lib zexy;
+#X obj 29 160 declare -lib iemlib;
+#X obj 29 187 declare -lib easyflow;
+#X restore 33 157 pd libraries;
+#X text 308 30 Example of a Song:;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 14 0;
+#X connect 3 0 9 0;
+#X connect 4 0 16 0;
+#X connect 8 0 1 0;
+#X connect 9 0 19 0;
+#X connect 10 0 2 0;
+#X connect 11 0 4 0;
+#X connect 11 0 10 0;
+#X connect 14 0 15 0;
+#X connect 15 0 0 1;
+#X connect 16 0 8 0;
+#X connect 18 0 12 0;
+#X connect 19 0 18 0;

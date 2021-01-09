@@ -1,0 +1,15 @@
+#N canvas 901 311 294 210 12;
+#X obj 5 54 cnv 34 34 34 \$0-rewind-s \$0-rewind-r empty 20 12 0 14
+-228856 -1 0;
+#X obj 87 13 receive rewind-\$1-s;
+#X obj 5 109 bng 34 250 50 0 rewind-\$1-s rewind-\$1-r empty 17 7 0
+10 -262144 -1 -1;
+#X obj 22 176 ggee/image data/image4.gif;
+#X obj 87 49 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 87 128 send run-state-\$1-r;
+#X obj 87 96 float 3;
+#X connect 1 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 5 0;
+#X coords 0 -1 1 1 34 34 2 5 5;

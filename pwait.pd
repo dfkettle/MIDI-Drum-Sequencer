@@ -1,0 +1,6 @@
+#N canvas 863 448 342 197 12;
+#X obj 44 32 inlet;
+#X obj 44 81 delay \$1;
+#X obj 44 134 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;

@@ -1,0 +1,15 @@
+#N canvas 516 369 306 209 12;
+#X obj 5 51 cnv 34 34 34 empty empty empty 20 12 0 14 -228856 -1 0
+;
+#X obj 5 103 bng 34 250 50 0 pause-\$1-s pause-\$1-r empty 17 7 0 10
+-262144 -1 -1;
+#X obj 22 172 ggee/image data/image1.gif;
+#X obj 81 54 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 81 21 receive pause-\$1-s;
+#X obj 81 118 send run-state-\$1-r;
+#X obj 81 86 float 2;
+#X connect 3 0 6 0;
+#X connect 4 0 3 0;
+#X connect 6 0 5 0;
+#X coords 0 -1 1 1 34 34 2 5 5;
