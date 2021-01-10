@@ -1,3 +1,9 @@
+87 Open Surdo
+86 Mute Surdo
+85 Castanets
+84 Belltree
+83 Jingle Bell
+82 Shaker
 81 Open Triangle
 80 Mute Triangle
 79 Open Cuica
@@ -11,8 +17,8 @@
 71 Short Whistle
 70 Maracas
 69 Cabasa
-68 Low Agogô
-67 High Agogô
+68 Low Agog 
+67 High Agog 
 66 Low Timbale
 65 High Timbale
 64 Low Conga
@@ -45,4 +51,12 @@
 37 Side Stick
 36 Electric Bass Drum
 35 Acoustic Bass Drum
-00 Unassigned
+34 Metronome Bell
+33 Metronome Click
+32 Square Click
+31 Sticks
+30 Scratch Pull
+29 Scratch Push
+28 Slap
+27 High Q
+00 Unassigned
