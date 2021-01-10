@@ -17,8 +17,8 @@
 71 Short Whistle
 70 Maracas
 69 Cabasa
-68 Low Agog 
-67 High Agog 
+68 Low Agogô
+67 High Agogô
 66 Low Timbale
 65 High Timbale
 64 Low Conga
