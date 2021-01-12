@@ -1,16 +1,16 @@
-#N canvas 626 178 290 227 12;
+#N canvas 626 178 377 227 12;
 #X obj 119 184 send msg-log-r;
 #X obj 151 89 symbol song;
 #X obj 119 51 t b b;
 #X obj 119 151 pack s s;
 #X obj 119 117 symbol Finished;
-#X obj 5 5 cnv 20 30 40 empty empty empty 20 12 0 14 -262144 -66577
+#X obj 5 5 cnv 20 30 40 empty empty empty 20 12 0 14 -204800 -66577
 0;
 #X obj 5 5 bng 20 250 50 0 \$0-bang-s \$0-bang-r End 0 30 0 10 -257985
 -1 -1;
 #X obj 119 14 r \$0-bang-s;
-#X obj 11 68 inlet;
-#X obj 11 103 s \$0-bang-r;
+#X obj 266 13 inlet;
+#X obj 266 48 s \$0-bang-r;
 #X obj 85 51 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X connect 1 0 3 1;

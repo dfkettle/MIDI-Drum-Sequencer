@@ -1,36 +1,15 @@
-#N canvas 13 121 651 469 12;
+#N canvas 444 59 736 524 12;
 #X declare -lib tof;
 #X declare -lib cyclone;
 #X declare -lib ggee;
 #X declare -lib zexy;
 #X declare -lib iemlib;
 #X declare -lib easyflow;
-#X obj 226 238 psync;
-#X obj 226 205 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--258113 -1;
-#X obj 401 143 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--258113 -1;
-#X obj 226 272 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--258113 -1;
-#X text 274 237 <== wait for both inlets to bang;
-#X text 364 300 <== click to edit pattern;
-#X obj 32 176 msg-log;
-#X obj 226 170 pattern Pattern-01;
-#X obj 226 301 pattern Pattern-03;
-#X obj 401 117 pattern Pattern-02;
-#X obj 226 15 song-start;
-#X obj 226 400 song-end;
-#X text 29 22 Drum Sequencer v0.1 \; Copyright (2021) \; David Kettle
+#X obj 10 8 cnv 15 200 500 empty empty empty 20 12 0 14 -204800 -66577
+0;
+#X text 31 21 Drum Sequencer v0.2 \; Copyright (c) 2021 \; David Kettle
 ;
-#X obj 401 170 pwait 2000;
-#X obj 401 201 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--258113 -1;
-#X obj 226 143 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--258113 -1;
-#X text 485 169 <== wait 2000 ms.;
-#X obj 226 354 pattern Pattern-01;
-#X obj 226 330 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--258113 -1;
+#X obj 28 442 msg-log;
 #N canvas 0 50 341 245 libraries 0;
 #X obj 29 52 declare -lib tof;
 #X obj 29 79 declare -lib cyclone;
@@ -39,28 +18,63 @@
 #X obj 29 133 declare -lib zexy;
 #X obj 29 160 declare -lib iemlib;
 #X obj 29 187 declare -lib easyflow;
-#X restore 32 207 pd libraries;
-#X text 308 30 Example of a Song:;
-#X obj 37 93 song-stop;
-#X obj 401 79 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -258113
+#X restore 28 469 pd libraries;
+#X text 28 417 Do not delete:;
+#X obj 94 124 song-start;
+#X obj 139 134 song-end;
+#X obj 32 124 song-stop;
+#X obj 222 8 cnv 15 500 500 empty empty empty 20 12 0 14 -204800 -66577
+0;
+#X obj 272 269 psync;
+#X obj 272 236 bng 15 250 50 0 empty empty empty 17 7 0 10 -262130
+-258113 -1;
+#X obj 447 174 bng 15 250 50 0 empty empty empty 17 7 0 10 -262130
+-258113 -1;
+#X obj 272 303 bng 15 250 50 0 empty empty empty 17 7 0 10 -262130
+-258113 -1;
+#X text 320 268 <== wait for both inlets to bang;
+#X text 410 331 <== click to edit pattern;
+#X obj 272 201 pattern Pattern-01;
+#X obj 272 332 pattern Pattern-03;
+#X obj 447 148 pattern Pattern-02;
+#X obj 272 46 song-start;
+#X obj 272 431 song-end;
+#X obj 447 201 pwait 2000;
+#X obj 447 232 bng 15 250 50 0 empty empty empty 17 7 0 10 -262130
+-258113 -1;
+#X obj 272 174 bng 15 250 50 0 empty empty empty 17 7 0 10 -262130
+-258113 -1;
+#X text 531 200 <== wait 2000 ms.;
+#X obj 272 385 pattern Pattern-01;
+#X obj 272 361 bng 15 250 50 0 empty empty empty 17 7 0 10 -262130
+-258113 -1;
+#X text 354 22 Example of a Song:;
+#X obj 447 110 bng 15 250 50 0 empty empty empty 17 7 0 10 -262130
+-258113 -1;
+#X obj 272 110 bng 15 250 50 0 empty empty empty 17 7 0 10 -262130
+-258113 -1;
+#X obj 272 148 pwait 2000;
+#X text 34 98 Copy and paste:;
+#X obj 34 193 pattern Empty;
+#X obj 34 233 pwait;
+#X obj 34 273 psync;
+#X obj 590 58 song-stop;
+#X obj 34 313 bng 15 250 50 0 empty empty empty 17 7 0 10 -262130 -258113
 -1;
-#X obj 226 79 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -258113
--1;
-#X obj 226 117 pwait 2000;
-#X connect 0 0 3 0;
-#X connect 1 0 0 0;
-#X connect 2 0 13 0;
-#X connect 3 0 8 0;
-#X connect 7 0 1 0;
-#X connect 8 0 18 0;
-#X connect 9 0 2 0;
-#X connect 10 0 23 0;
-#X connect 10 0 22 0;
-#X connect 13 0 14 0;
-#X connect 14 0 0 1;
-#X connect 15 0 7 0;
+#X connect 9 0 12 0;
+#X connect 10 0 9 0;
+#X connect 11 0 20 0;
+#X connect 12 0 16 0;
+#X connect 15 0 10 0;
+#X connect 16 0 25 0;
 #X connect 17 0 11 0;
-#X connect 18 0 17 0;
-#X connect 22 0 9 0;
-#X connect 23 0 24 0;
-#X connect 24 0 15 0;
+#X connect 18 0 28 0;
+#X connect 18 0 27 0;
+#X connect 20 0 21 0;
+#X connect 21 0 9 1;
+#X connect 22 0 15 0;
+#X connect 24 0 19 0;
+#X connect 25 0 24 0;
+#X connect 27 0 17 0;
+#X connect 28 0 29 0;
+#X connect 29 0 22 0;
