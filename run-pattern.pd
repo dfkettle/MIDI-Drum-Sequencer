@@ -1,4 +1,4 @@
-#N canvas 744 34 654 619 12;
+#N canvas 744 34 654 663 12;
 #X obj 42 25 inlet;
 #X obj 65 165 get-parms \$1;
 #X obj 42 57 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -12,7 +12,7 @@
 #X obj 85 412 /;
 #X floatatom 85 435 10 0 0 1 MS/STEP - -;
 #X obj 42 551 next-loop \$1;
-#X obj 305 573 outlet;
+#X obj 305 609 outlet;
 #X obj 120 25 symbol \$2;
 #X msg 120 49 \; msg-log-r Running \$1;
 #X obj 42 497 for++ 0 0 0 1;
@@ -57,6 +57,14 @@
 -1 -1;
 #X obj 344 504 f 0;
 #X obj 314 504 f 1;
+#X obj 112 606 send song-stop;
+#X obj 434 451 receive song-start;
+#X obj 434 572 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 305 580 spigot;
+#X obj 467 486 receive song-stop;
+#X obj 467 515 f 0;
+#X obj 434 515 f 1;
 #X connect 0 0 2 0;
 #X connect 1 0 7 0;
 #X connect 2 0 13 0;
@@ -92,8 +100,8 @@
 #X connect 25 0 29 0;
 #X connect 26 0 15 0;
 #X connect 30 0 27 0;
-#X connect 32 0 12 0;
 #X connect 32 0 33 0;
+#X connect 32 0 52 0;
 #X connect 33 0 32 1;
 #X connect 34 0 47 0;
 #X connect 35 0 15 0;
@@ -112,3 +120,9 @@
 #X connect 43 0 31 0;
 #X connect 47 0 33 0;
 #X connect 48 0 33 0;
+#X connect 50 0 55 0;
+#X connect 51 0 52 1;
+#X connect 52 0 12 0;
+#X connect 53 0 54 0;
+#X connect 54 0 51 0;
+#X connect 55 0 51 0;
