@@ -1,4 +1,4 @@
-#N canvas 808 184 415 325 12;
+#N canvas 26 226 415 353 12;
 #X msg 109 94 clear;
 #X obj 63 249 savepanel;
 #X msg 63 273 write \$1;
@@ -7,7 +7,7 @@
 #X obj 258 23 receive \$0-qlist;
 #X obj 258 52 qlist;
 #X obj 63 67 t b b b;
-#N canvas 601 0 1013 728 add-data-to-list 0;
+#N canvas 294 0 1043 758 add-data-to-list 0;
 #X obj 10 22 inlet;
 #X obj 127 125 send \$0-qlist;
 #X obj 301 123 send \$0-qlist;
@@ -125,6 +125,18 @@
 #X obj 475 631 receive instr-\$1-6-s;
 #X obj 649 607 send instr-\$1-7-r;
 #X obj 649 631 receive instr-\$1-7-s;
+#X obj 865 446 receive \$0-add;
+#X obj 904 544 float;
+#X obj 834 446 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 865 479 for++ 0 7;
+#X obj 865 512 t b f;
+#X obj 865 572 f \$1;
+#X obj 904 572 f 0;
+#X obj 865 609 get-mute;
+#X obj 865 711 send \$0-qlist;
+#X obj 865 640 pack f f;
+#X msg 865 677 add mute-\$2 \$1;
 #X connect 0 0 5 0;
 #X connect 10 0 20 0;
 #X connect 11 0 22 0;
@@ -204,6 +216,18 @@
 #X connect 111 0 82 0;
 #X connect 113 0 83 0;
 #X connect 115 0 84 0;
+#X connect 116 0 119 0;
+#X connect 117 0 122 0;
+#X connect 118 0 119 0;
+#X connect 119 0 120 0;
+#X connect 120 0 121 0;
+#X connect 120 1 117 0;
+#X connect 121 0 123 0;
+#X connect 122 0 123 1;
+#X connect 122 0 125 1;
+#X connect 123 0 125 0;
+#X connect 125 0 126 0;
+#X connect 126 0 124 0;
 #X restore 86 159 pd add-data-to-list;
 #X obj 5 5 cnv 30 30 42 empty empty empty 20 12 0 14 -262144 -66577
 0;
@@ -211,7 +235,7 @@
 -1 -1;
 #X obj 63 23 receive \$1-save-s;
 #X text 38 196 Get full path to sub-directory;
-#X obj 63 217 get-sub-dir ../data;
+#X obj 63 217 get-sub-dir ./data;
 #X connect 0 0 3 0;
 #X connect 1 0 2 0;
 #X connect 2 0 4 0;
