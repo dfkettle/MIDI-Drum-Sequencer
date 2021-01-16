@@ -1,11 +1,11 @@
-#N canvas 88 451 696 316 12;
+#N canvas 31 449 696 316 12;
 #X obj 88 263 cyclone/seq;
 #X msg 192 67 stop;
-#X msg 453 96 write;
+#X msg 453 171 write;
 #X obj 56 14 r song-start;
 #X obj 192 14 r song-stop;
 #X obj 453 14 r song-save;
-#X obj 453 67 t b b;
+#X obj 453 68 t b b;
 #X obj 5 5 cnv 20 30 40 empty empty empty 20 12 0 14 -204800 -66577
 0;
 #X obj 5 25 bng 20 250 50 0 song-save \$0-noop Save 0 -9 0 10 -257985
@@ -23,20 +23,21 @@
 #X obj 56 68 t b b;
 #X msg 88 95 record;
 #X text 55 141 (bug in [seq]);
-#X text 502 119 (bug in [seq]);
+#X text 488 114 (bug in [seq]);
 #X obj 294 78 spigot;
 #X obj 333 55 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 351 53 <== debug;
 #X obj 294 104 print song-record;
-#X obj 504 97 note-off 10 0 0;
+#X obj 485 93 note-off 10 0 0;
 #X obj 56 120 note-off 10 0 0;
+#X obj 453 141 delay 5000;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 10 0;
 #X connect 4 0 11 0;
 #X connect 5 0 12 0;
-#X connect 6 0 2 0;
+#X connect 6 0 25 0;
 #X connect 6 1 23 0;
 #X connect 9 0 0 0;
 #X connect 10 0 15 0;
@@ -50,4 +51,5 @@
 #X connect 16 0 0 0;
 #X connect 19 0 22 0;
 #X connect 20 0 19 1;
+#X connect 25 0 2 0;
 #X coords 0 -1 1 1 30 40 2 5 5;
