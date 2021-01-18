@@ -1,26 +1,23 @@
-#N canvas 613 56 684 472 12;
+#N canvas 613 56 673 410 12;
 #X obj 289 27 loadbang;
 #X obj 257 28 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X msg 289 375 add \$1;
-#X msg 56 357 bang;
-#X obj 56 333 receive \$0-display-menu-s;
+#X msg 289 315 add \$1;
+#X msg 52 283 bang;
+#X obj 52 259 receive \$0-display-menu-s;
 #X obj 20 20 cnv 15 204 24 empty empty empty 20 12 0 14 -262130 -66577
 0;
 #X symbolatom 44 23 25 0 0 0 - instr-#1-#2-r instr-#1-#2-s;
 #X obj 23 23 bng 18 250 50 0 \$0-display-menu-s \$0-noop-r empty 17
 7 0 10 -257985 -1 -1;
-#X obj 524 429 send instr-\$1-\$2-r;
-#X obj 52 173 send instr-\$1-\$2-r;
+#X obj 524 369 send instr-\$1-\$2-r;
+#X obj 52 165 send instr-\$1-\$2-r;
 #X obj 52 141 symbol 00_Unassigned;
 #X msg 328 136 read -c data/Percussion.txt;
 #X msg 309 105 sort;
 #X msg 356 105 clear;
 #X obj 289 70 t b b b b;
 #X msg 335 227 clear;
-#X obj 312 282 - 1;
-#X obj 289 200 t b b b;
-#X obj 289 316 for++ 0 0 5 1;
 #X obj 309 168 text define -k instr-\$1-\$2;
 #A set 00 Unassigned \; 27 High Q \; 28 Slap \; 29 Scratch Push
 \; 30 Scratch Pull \; 31 Sticks \; 32 Square Click \; 33 Metronome Click
@@ -39,30 +36,30 @@
 79 Open Cuica \; 80 Mute Triangle \; 81 Open Triangle \; 82 Shaker
 \; 83 Jingle Bell \; 84 Belltree \; 85 Castanets \; 86 Mute Surdo
 \; 87 Open Surdo \;;
-#X obj 312 256 text size instr-\$1-\$2;
-#X obj 289 347 text get instr-\$1-\$2;
-#X obj 289 403 tof/pmenu 1 1 LightGreen black red;
+#X obj 289 343 tof/pmenu 1 1 LightGreen black red;
+#X obj 289 285 text sequence instr-\$1-\$2;
+#X msg 289 256 line 0 \, bang;
+#X obj 289 200 t b b;
+#X text 370 69 <== load data and sort;
+#X text 342 198 <== copy data to menu;
 #X connect 0 0 10 0;
 #X connect 0 0 14 0;
 #X connect 1 0 14 0;
-#X connect 2 0 22 0;
-#X connect 3 0 22 0;
+#X connect 2 0 17 0;
+#X connect 3 0 17 0;
 #X connect 4 0 3 0;
 #X connect 10 0 9 0;
-#X connect 11 0 19 0;
-#X connect 12 0 19 0;
-#X connect 13 0 19 0;
-#X connect 14 0 17 0;
+#X connect 11 0 16 0;
+#X connect 12 0 16 0;
+#X connect 13 0 16 0;
+#X connect 14 0 20 0;
 #X connect 14 1 12 0;
 #X connect 14 2 11 0;
 #X connect 14 3 13 0;
-#X connect 15 0 22 0;
-#X connect 16 0 18 1;
-#X connect 17 0 18 0;
-#X connect 17 1 20 0;
-#X connect 17 2 15 0;
-#X connect 18 0 21 0;
-#X connect 20 0 16 0;
-#X connect 21 0 2 0;
-#X connect 22 1 8 0;
+#X connect 15 0 17 0;
+#X connect 17 1 8 0;
+#X connect 18 0 2 0;
+#X connect 19 0 18 0;
+#X connect 20 0 19 0;
+#X connect 20 1 15 0;
 #X coords 0 -1 1 1 204 24 2 20 20;
