@@ -1,55 +1,68 @@
-#N canvas 32 12 671 446 12;
+#N canvas 613 56 684 472 12;
 #X obj 289 27 loadbang;
 #X obj 257 28 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X msg 599 122 clear;
-#X msg 389 122 read data/Percussion.txt cr;
-#X obj 289 185 textfile;
-#X msg 332 122 rewind;
-#X msg 289 122 bang;
-#X obj 364 220 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 302 246 spigot;
-#X msg 302 217 bang;
-#X msg 289 317 add \$1;
-#X obj 289 358 tof/pmenu 1 1 black white red;
-#X msg 428 317 bang;
-#X obj 364 185 float 1;
-#X obj 289 70 t b b b b b;
-#X obj 428 285 receive \$0-display-menu-s;
+#X msg 289 375 add \$1;
+#X msg 56 357 bang;
+#X obj 56 333 receive \$0-display-menu-s;
 #X obj 20 20 cnv 15 204 24 empty empty empty 20 12 0 14 -262130 -66577
 0;
 #X symbolatom 44 23 25 0 0 0 - instr-#1-#2-r instr-#1-#2-s;
 #X obj 23 23 bng 18 250 50 0 \$0-display-menu-s \$0-noop-r empty 17
 7 0 10 -257985 -1 -1;
-#X obj 289 284 cyclone/tosymbol;
-#X obj 489 392 send instr-\$1-\$2-r;
+#X obj 524 429 send instr-\$1-\$2-r;
 #X obj 52 173 send instr-\$1-\$2-r;
 #X obj 52 141 symbol 00_Unassigned;
+#X msg 328 136 read -c data/Percussion.txt;
+#X msg 309 105 sort;
+#X msg 356 105 clear;
+#X obj 289 70 t b b b b;
+#X msg 335 227 clear;
+#X obj 312 282 - 1;
+#X obj 289 200 t b b b;
+#X obj 289 316 for++ 0 0 5 1;
+#X obj 309 168 text define -k instr-\$1-\$2;
+#A set 00 Unassigned \; 27 High Q \; 28 Slap \; 29 Scratch Push
+\; 30 Scratch Pull \; 31 Sticks \; 32 Square Click \; 33 Metronome Click
+\; 34 Metronome Bell \; 35 Acoustic Bass Drum \; 36 Electric Bass Drum
+\; 37 Side Stick \; 38 Acoustic Snare \; 39 Hand Clap \; 40 Electric Snare
+\; 41 Low Floor Tom \; 42 Closed Hi-hat \; 43 High Floor Tom
+\; 44 Pedal Hi-hat \; 45 Low Tom \; 46 Open Hi-hat \; 47 Low-Mid Tom
+\; 48 Hi-Mid Tom \; 49 Crash Cymbal 1 \; 50 High Tom \; 51 Ride Cymbal 1
+\; 52 Chinese Cymbal \; 53 Ride Bell \; 54 Tambourine \; 55 Splash Cymbal
+\; 56 Cowbell \; 57 Crash Cymbal 2 \; 58 Vibra Slap \; 59 Ride Cymbal 2
+\; 60 High Bongo \; 61 Low Bongo \; 62 Mute High Conga \; 63 Open High Conga
+\; 64 Low Conga \; 65 High Timbale \; 66 Low Timbale \; 67 High Agogô
+\; 68 Low Agogô \; 69 Cabasa \; 70 Maracas \; 71 Short Whistle
+\; 72 Long Whistle \; 73 Short Guiro \; 74 Long Guiro \; 75 Claves
+\; 76 High Woodblock \; 77 Low Woodblock \; 78 Mute Cuica \;
+79 Open Cuica \; 80 Mute Triangle \; 81 Open Triangle \; 82 Shaker
+\; 83 Jingle Bell \; 84 Belltree \; 85 Castanets \; 86 Mute Surdo
+\; 87 Open Surdo \;;
+#X obj 312 256 text size instr-\$1-\$2;
+#X obj 289 347 text get instr-\$1-\$2;
+#X obj 289 403 tof/pmenu 1 1 LightGreen black red;
+#X connect 0 0 10 0;
 #X connect 0 0 14 0;
-#X connect 0 0 22 0;
 #X connect 1 0 14 0;
-#X connect 2 0 4 0;
-#X connect 2 0 11 0;
-#X connect 3 0 4 0;
-#X connect 4 0 9 0;
-#X connect 4 0 19 0;
-#X connect 4 1 7 0;
-#X connect 5 0 4 0;
-#X connect 6 0 4 0;
-#X connect 7 0 8 1;
-#X connect 8 0 4 0;
-#X connect 9 0 8 0;
-#X connect 10 0 11 0;
-#X connect 11 1 20 0;
-#X connect 12 0 11 0;
-#X connect 13 0 7 0;
-#X connect 14 0 6 0;
-#X connect 14 1 5 0;
-#X connect 14 2 3 0;
-#X connect 14 3 2 0;
-#X connect 14 4 13 0;
-#X connect 15 0 12 0;
-#X connect 19 0 10 0;
-#X connect 22 0 21 0;
+#X connect 2 0 22 0;
+#X connect 3 0 22 0;
+#X connect 4 0 3 0;
+#X connect 10 0 9 0;
+#X connect 11 0 19 0;
+#X connect 12 0 19 0;
+#X connect 13 0 19 0;
+#X connect 14 0 17 0;
+#X connect 14 1 12 0;
+#X connect 14 2 11 0;
+#X connect 14 3 13 0;
+#X connect 15 0 22 0;
+#X connect 16 0 18 1;
+#X connect 17 0 18 0;
+#X connect 17 1 20 0;
+#X connect 17 2 15 0;
+#X connect 18 0 21 0;
+#X connect 20 0 16 0;
+#X connect 21 0 2 0;
+#X connect 22 1 8 0;
 #X coords 0 -1 1 1 204 24 2 20 20;
