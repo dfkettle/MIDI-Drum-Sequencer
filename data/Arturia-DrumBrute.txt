@@ -1,0 +1,18 @@
+00 Unassigned
+36 Kick Drum 1
+37 Kick Drum 2
+38 Snare
+39 Hand Clap
+40 Rim Shot
+41 Claves
+42 Closed Hi-hat
+43 Open Hi-hat
+44 Conga High
+45 Tom High
+46 Conga Low
+47 Tom Low
+48 Cymbal
+49 Reverse Cymbal
+50 Maracas
+51 Tambourine
+52 Zap
