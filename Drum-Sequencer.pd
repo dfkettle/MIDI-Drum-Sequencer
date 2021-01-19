@@ -68,12 +68,12 @@
 #X obj 293 387 bng 15 250 50 0 empty empty empty 17 7 0 10 -262130
 -258113 -1;
 #X text 357 333 <== loop 3 times;
-#X text 31 21 Drum Sequencer v0.22 \; Copyright (c) 2021 \; David Kettle
-;
 #X obj 29 444 song-record;
 #X text 58 464 <== save MIDI file;
 #X obj 272 113 pwait 2000;
 #X text 367 363 <== song is finished;
+#X text 31 21 Drum Sequencer v0.3 \; Copyright (c) 2021 \; David Kettle
+;
 #X connect 8 0 11 0;
 #X connect 9 0 8 0;
 #X connect 10 0 19 0;
@@ -89,7 +89,7 @@
 #X connect 23 0 38 0;
 #X connect 24 0 23 0;
 #X connect 26 0 16 0;
-#X connect 27 0 45 0;
+#X connect 27 0 44 0;
 #X connect 35 0 37 0;
 #X connect 35 1 36 0;
 #X connect 36 0 37 0;
@@ -97,4 +97,4 @@
 #X connect 37 1 18 0;
 #X connect 38 0 37 0;
 #X connect 40 0 15 0;
-#X connect 45 0 21 0;
+#X connect 44 0 21 0;

@@ -1,4 +1,4 @@
-#N canvas 26 226 415 353 12;
+#N canvas 511 224 415 353 12;
 #X msg 109 94 clear;
 #X obj 63 249 savepanel;
 #X msg 63 273 write \$1;
@@ -7,7 +7,7 @@
 #X obj 258 23 receive \$0-qlist;
 #X obj 258 52 qlist;
 #X obj 63 67 t b b b;
-#N canvas 294 0 1043 758 add-data-to-list 0;
+#N canvas 294 0 1043 802 add-data-to-list 1;
 #X obj 10 22 inlet;
 #X obj 127 125 send \$0-qlist;
 #X obj 301 123 send \$0-qlist;
@@ -50,15 +50,15 @@
 #X obj 475 303 receive \$0-add;
 #X obj 649 403 send \$0-qlist;
 #X obj 649 303 receive \$0-add;
-#X obj 865 392 send \$0-qlist;
+#X obj 865 329 send \$0-qlist;
 #X obj 865 25 receive \$0-add;
-#X obj 865 240 f \$1;
-#X obj 904 240 f 0;
-#X obj 938 241 f 0;
-#X obj 865 195 t b b f;
-#X obj 865 279 get-toggle;
-#X obj 865 321 pack f f f;
-#X obj 904 123 float;
+#X obj 865 212 f \$1;
+#X obj 904 212 f 0;
+#X obj 938 213 f 0;
+#X obj 865 167 t b b f;
+#X obj 865 251 get-toggle;
+#X obj 865 277 pack f f f;
+#X obj 904 116 float;
 #X obj 834 25 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X msg 127 100 add tempo \$1;
@@ -69,7 +69,7 @@
 #X msg 301 237 add level-2 \$1;
 #X msg 474 237 add level-3 \$1;
 #X msg 648 237 add level-4 \$1;
-#X msg 865 358 add tgl \$2 \$3 \$1;
+#X msg 865 303 add tgl \$2 \$3 \$1;
 #X obj 127 545 send \$0-qlist;
 #X obj 127 445 receive \$0-add;
 #X obj 301 545 send \$0-qlist;
@@ -107,8 +107,8 @@
 #X obj 649 351 receive \$1-rnd-amt-s;
 #X msg 649 377 add rnd-amt \$1;
 #X obj 865 58 for++ 0 7;
-#X obj 865 91 t b f;
-#X obj 865 157 for++ 0 31;
+#X obj 865 84 t b f;
+#X obj 865 141 for++ 0 31;
 #X obj 127 469 send instr-\$1-0-r;
 #X obj 127 493 receive instr-\$1-0-s;
 #X obj 301 469 send instr-\$1-1-r;
@@ -125,18 +125,23 @@
 #X obj 475 631 receive instr-\$1-6-s;
 #X obj 649 607 send instr-\$1-7-r;
 #X obj 649 631 receive instr-\$1-7-s;
-#X obj 865 446 receive \$0-add;
-#X obj 904 544 float;
-#X obj 834 446 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 865 363 receive \$0-add;
+#X obj 904 454 float;
+#X obj 834 363 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 865 479 for++ 0 7;
-#X obj 865 512 t b f;
-#X obj 865 572 f \$1;
-#X obj 904 572 f 0;
-#X obj 865 609 get-mute;
-#X obj 865 711 send \$0-qlist;
-#X obj 865 640 pack f f;
-#X msg 865 677 add mute-\$2 \$1;
+#X obj 865 396 for++ 0 7;
+#X obj 865 422 t b f;
+#X obj 865 482 f \$1;
+#X obj 904 482 f 0;
+#X obj 865 519 get-mute;
+#X obj 865 593 send \$0-qlist;
+#X obj 865 543 pack f f;
+#X msg 865 568 add mute-\$2 \$1;
+#X obj 865 735 send \$0-qlist;
+#X obj 865 635 receive \$0-add;
+#X obj 865 659 send drumkit-\$1-r;
+#X obj 865 683 receive drumkit-\$1-s;
+#X msg 865 709 add drumkit \$1;
 #X connect 0 0 5 0;
 #X connect 10 0 20 0;
 #X connect 11 0 22 0;
@@ -228,6 +233,9 @@
 #X connect 123 0 125 0;
 #X connect 125 0 126 0;
 #X connect 126 0 124 0;
+#X connect 128 0 129 0;
+#X connect 130 0 131 0;
+#X connect 131 0 127 0;
 #X restore 86 159 pd add-data-to-list;
 #X obj 5 5 cnv 30 30 42 empty empty empty 20 12 0 14 -262144 -66577
 0;

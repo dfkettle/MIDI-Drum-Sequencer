@@ -1,0 +1,53 @@
+#N canvas 50 407 502 311 12;
+#X msg 289 40 bang;
+#X obj 20 20 cnv 15 204 24 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X symbolatom 44 23 25 0 0 0 - drumkit-#1-r drumkit-#1-s;
+#X obj 23 23 bng 18 250 50 0 \$0-load-drumkit-s \$0-load-drumkit-noop
+empty 17 7 0 10 -257985 -1 -1;
+#X msg 321 97 clear;
+#X obj 289 153 openpanel;
+#X obj 289 124 get-sub-dir data;
+#X obj 26 273 send drumkit-\$1-r;
+#X obj 289 214 text define -k drumkit-\$1;
+#A set 00 Unassigned \; 27 High Q \; 28 Slap \; 29 Scratch Push
+\; 30 Scratch Pull \; 31 Sticks \; 32 Square Click \; 33 Metronome Click
+\; 34 Metronome Bell \; 35 Acoustic Bass Drum \; 36 Electric Bass Drum
+\; 37 Side Stick \; 38 Acoustic Snare \; 39 Hand Clap \; 40 Electric Snare
+\; 41 Low Floor Tom \; 42 Closed Hi-hat \; 43 High Floor Tom
+\; 44 Pedal Hi-hat \; 45 Low Tom \; 46 Open Hi-hat \; 47 Low-Mid Tom
+\; 48 Hi-Mid Tom \; 49 Crash Cymbal 1 \; 50 High Tom \; 51 Ride Cymbal 1
+\; 52 Chinese Cymbal \; 53 Ride Bell \; 54 Tambourine \; 55 Splash Cymbal
+\; 56 Cowbell \; 57 Crash Cymbal 2 \; 58 Vibra Slap \; 59 Ride Cymbal 2
+\; 60 High Bongo \; 61 Low Bongo \; 62 Mute High Conga \; 63 Open High Conga
+\; 64 Low Conga \; 65 High Timbale \; 66 Low Timbale \; 67 High Agogô
+\; 68 Low Agogô \; 69 Cabasa \; 70 Maracas \; 71 Short Whistle
+\; 72 Long Whistle \; 73 Short Guiro \; 74 Long Guiro \; 75 Claves
+\; 76 High Woodblock \; 77 Low Woodblock \; 78 Mute Cuica \;
+79 Open Cuica \; 80 Mute Triangle \; 81 Open Triangle \; 82 Shaker
+\; 83 Jingle Bell \; 84 Belltree \; 85 Castanets \; 86 Mute Surdo
+\; 87 Open Surdo \;;
+#X obj 26 66 loadbang;
+#X msg 50 101 read -c data/General-Midi.txt;
+#X obj 289 16 receive \$0-load-drumkit-s;
+#X msg 289 182 read -c \$1;
+#X obj 289 70 t b b;
+#X obj 109 206 parse-file-path;
+#X obj 26 143 symbol General-Midi;
+#X msg 26 243 symbol \$1;
+#X connect 0 0 13 0;
+#X connect 4 0 8 0;
+#X connect 5 0 12 0;
+#X connect 5 0 14 0;
+#X connect 6 0 5 0;
+#X connect 9 0 10 0;
+#X connect 9 0 15 0;
+#X connect 10 0 8 0;
+#X connect 11 0 0 0;
+#X connect 12 0 8 0;
+#X connect 13 0 6 0;
+#X connect 13 1 4 0;
+#X connect 14 2 16 0;
+#X connect 15 0 16 0;
+#X connect 16 0 7 0;
+#X coords 0 -1 1 1 204 24 2 20 20;
