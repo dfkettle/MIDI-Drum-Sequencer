@@ -1,0 +1,49 @@
+00 Unassigned
+54 Brush Roll
+56 Hi-hat Closed Heavey
+58 Crash Cymbal Light
+59 Bass Drum Light
+60 Snare Drum + Rim Heavy
+61 Ride Cymbal Cup
+62 Snare Drum + Rim Light
+65 Bass Drum
+66 Rim Shot
+67 Snare Drum Heavy
+68 Brush Shot
+69 Snare Drum Light
+70 Hi-hat Pedal
+71 Snare Drum Echo
+72 Tom 4
+73 Hi-hat Closed
+74 Tom 3
+75 Hi-hat Open
+76 Tom 2
+77 Tom 1
+78 Ride Cymbal
+79 Electronic Tom 3
+80 Crash Cymbal
+81 Electronic Tom 2
+82 Crash Cymbal
+83 Electronic Tom 1
+84 Conga Low
+85 Cabasa
+86 Conga High
+87 Metronome
+88 Bongo
+89 Timbale Low
+90 Claves
+91 Timbale High
+92 Castanets
+93 Cuica Low
+94 Cowbell
+95 Cuica High
+96 Hand Claps
+97 Agogo Low
+99 Agogo High
+100 Bongo Low
+101 Electronic Tom 2
+102 Tambourine
+103 Crash Cymbal
+104 Triangle Closed
+105 Brush Roll
+106 Triangle Open
