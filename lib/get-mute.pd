@@ -1,0 +1,17 @@
+#N canvas 887 582 346 175 12;
+#X floatatom 207 49 5 0 0 0 - - -;
+#X obj 28 12 inlet;
+#X obj 207 78 outlet;
+#X obj 81 12 inlet instr;
+#X obj 28 84 pack f f;
+#X floatatom 28 48 5 0 0 0 - - -;
+#X floatatom 81 48 5 0 0 0 - - -;
+#X obj 207 18 receive mute-state;
+#X msg 28 116 \; mute-\$1-\$2 get;
+#X connect 0 0 2 0;
+#X connect 1 0 5 0;
+#X connect 3 0 6 0;
+#X connect 4 0 8 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 1;
+#X connect 7 0 0 0;

@@ -1,0 +1,19 @@
+#N canvas 810 183 348 230 12;
+#X obj 44 17 inlet;
+#X obj 44 66 delay \$1;
+#X obj 44 169 outlet;
+#X obj 122 17 r song-stop;
+#X obj 122 97 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 122 41 f 0;
+#X obj 219 17 r song-start;
+#X obj 219 41 f 1;
+#X obj 44 139 spigot;
+#X connect 0 0 1 0;
+#X connect 1 0 8 0;
+#X connect 3 0 5 0;
+#X connect 4 0 8 1;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 4 0;
+#X connect 8 0 2 0;

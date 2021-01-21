@@ -1,0 +1,17 @@
+#N canvas 314 129 412 306 12;
+#X obj 27 18 receive msg-log-r;
+#X obj 59 87 unpack s s;
+#X obj 27 242 print Log;
+#X obj 27 160 time XXXXXXXXXXX;
+#X obj 27 209 cyclone/sprintf [%02d:%02d:%02d.%03d] %s %s;
+#X obj 27 56 t b a;
+#X connect 0 0 5 0;
+#X connect 1 0 4 4;
+#X connect 1 1 4 5;
+#X connect 3 0 4 0;
+#X connect 3 1 4 1;
+#X connect 3 2 4 2;
+#X connect 3 3 4 3;
+#X connect 4 0 2 0;
+#X connect 5 0 3 0;
+#X connect 5 1 1 0;

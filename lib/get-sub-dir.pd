@@ -1,0 +1,22 @@
+#N canvas 688 309 510 300 12;
+#X obj 37 145 pdcontrol;
+#X obj 37 27 inlet;
+#X obj 37 64 t b b;
+#X obj 69 90 symbol \$1;
+#X obj 37 187 pack s s;
+#X msg 37 212 symbol \$1/\$2;
+#X obj 37 255 outlet;
+#X text 147 19 Get sub-directory of current working directory;
+#X text 147 44 Creation argument: name of sub-directory;
+#X obj 11 45 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 37 121 dir 1;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 10 0;
+#X connect 2 1 3 0;
+#X connect 3 0 4 1;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 9 0 2 0;
+#X connect 10 0 0 0;
