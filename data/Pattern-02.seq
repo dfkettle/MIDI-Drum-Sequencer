@@ -14,7 +14,7 @@ instr-4 00 Unassigned;
 instr-3 00 Unassigned;
 instr-2 00 Unassigned;
 instr-1 00 Unassigned;
-instr-0 41Â LowÂ FloorÂ Tom;
+instr-0 41 Low Floor Tom;
 tgl 0 0 1;
 tgl 0 1 0;
 tgl 0 2 1;
