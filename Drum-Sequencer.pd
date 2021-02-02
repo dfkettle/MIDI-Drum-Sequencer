@@ -74,7 +74,7 @@
 #X text 58 464 <== save MIDI file;
 #X obj 272 113 pwait 2000;
 #X text 367 363 <== song is finished;
-#X text 32 23 Drum Sequencer v0.3 \; Copyright (c) 2021 \; David Kettle
+#X text 32 23 Drum Sequencer v0.3a \; Copyright (c) 2021 \; David Kettle
 ;
 #X connect 8 0 11 0;
 #X connect 9 0 8 0;
