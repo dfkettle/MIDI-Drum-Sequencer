@@ -1,4 +1,4 @@
-#N canvas 771 61 547 589 12;
+#N canvas 771 61 547 644 12;
 #X obj 43 527 outlet;
 #X obj 118 153 get-parms \$1;
 #X floatatom 118 255 3 0 0 1 VEL-1 - -;
@@ -28,8 +28,13 @@
 #X obj 83 410 t b b;
 #X obj 43 65 t b f b b b;
 #X obj 135 440 f 0;
+#X obj 164 576 spigot;
+#X obj 164 602 print next-instrument;
+#X obj 203 554 tgl 15 0 empty empty <-debug 17 7 0 10 -262144 -1 -1
+1 1;
 #X connect 1 0 6 0;
 #X connect 2 0 3 1;
+#X connect 3 0 28 0;
 #X connect 4 0 17 2;
 #X connect 5 0 3 1;
 #X connect 6 0 10 0;
@@ -70,3 +75,5 @@
 #X connect 26 3 1 0;
 #X connect 26 4 27 0;
 #X connect 27 0 22 0;
+#X connect 28 0 29 0;
+#X connect 30 0 28 1;

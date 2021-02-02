@@ -1,8 +1,7 @@
-#N canvas 564 124 805 283 12;
+#N canvas 564 124 805 336 12;
 #X obj 289 27 loadbang;
 #X obj 257 28 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X msg 289 181 add \$1;
 #X msg 90 166 bang;
 #X obj 90 142 receive \$0-display-menu-s;
 #X obj 20 20 cnv 15 204 24 empty empty empty 20 12 0 14 -262130 -66577
@@ -10,47 +9,54 @@
 #X symbolatom 44 23 25 0 0 0 - instr-#1-#2-r instr-#1-#2-s;
 #X obj 23 23 bng 18 250 50 0 \$0-display-menu-s \$0-noop-r empty 17
 7 0 10 -257985 -1 -1;
-#X obj 524 235 send instr-\$1-\$2-r;
+#X obj 524 281 send instr-\$1-\$2-r;
 #X obj 126 108 send instr-\$1-\$2-r;
 #X obj 126 84 symbol 00_Unassigned;
 #X msg 335 93 clear;
 #X obj 597 196 text define -k instr-\$1-\$2;
-#A set 000 Afoxe_Afoxe \; 001 Agogo_1_A_Afoxe \; 002 Agogo_2_A_Afoxe
-\; 003 Agogo_2_B_Afoxe \; 004 Agogo_3_A_Afoxe \; 005 Agogo_3_B_Afoxe
-\; 006 Le_1_A_Afoxe \; 007 Le_1_B_Afoxe \; 008 Le_2_A_Afoxe \; 009 Le_2_B_Afoxe
-\; 010 Rum_A_Afoxe \; 011 Rum_B_Afoxe \; 012 Rumbi_A_Afoxe \; 013 Rumbi_B_Afoxe
-\; 014 Shekere_1_A_Afoxe \; 015 Shekere_1_B_Afoxe \; 016 Shekere_2_Afoxe
-\; 017 Surdo_A_Afoxe \; 018 Surdo_B_Afoxe \; 019 Agogo_Afro \; 020 Alfaia_Afro
-\; 021 Bell_Afro \; 022 Caxixi_1_Afro \; 023 Caxixi_2_Afro \; 024 Le_Vase_A_Afro
-\; 025 Le_Vase_B_Afro \; 026 Rum_Baravento_A_Afro \; 027 Rum_Baravento_B_Afro
-\; 028 Rum_Vase_A_Afro \; 029 Rum_Vase_B_Afro \; 030 Rumpi_Baravento_A_Afro
-\; 031 Rumpi_Baravento_B_Afro \; 032 Rumpi_Vase_A_Afro \; 033 Rumpi_Vase_B_Afro
-\; 034 Surdo_Afro \; 035 Agogo_A_Batu \; 036 Agogo_B_Batu \; 037 Apito_A_Batu
-\; 038 Apito_B_Batu \; 039 Caixa_Batu \; 040 Ganza_1_A_Batu \; 041 Ganza_1_B_Batu
-\; 042 Ganza_2_A_Batu \; 043 Ganza_2_B_Batu \; 044 Pandeiro_A_Batu
-\; 045 Pandeiro_B_Batu \; 046 Rebolo_A_Batu \; 047 Rebolo_B_Batu \;
-048 Reco_A_Batu \; 049 Reco_B_Batu \; 050 Repenique_A_Batu \; 051 Repenique_B_Batu
-\; 052 Repique_Mao_A_Batu \; 053 Repique_Mao_B_Batu \; 054 Rocar_A_Batu
-\; 055 Rocar_B_Batu \; 056 Surdo_1_Batu \; 057 Surdo_2_Batu \; 058 Surdo_3_Batu
-\; 059 Tamborim_A_Batu \; 060 Tamborim_B_Batu \; 061 Tan_Tan_Batu \;
-062 Agogo_A_CapF \; 063 Agogo_B_CapF \; 064 Atabaque_1_A_CapF \; 065 Atabaque_1_B_CapF
-\; 066 Atabaque_2_A_CapF \; 067 Atabaque_2_B_CapF \; 068 Berimbau_High_A_CapF
-\; 069 Berimbau_High_B_CapF \; 070 Berimbau_Low_A_CapF \; 071 Berimbau_Low_B_CapF
-\; 072 Berimbau_Mid_A_CapF \; 073 Berimbau_Mid_B_CapF \; 074 Pandeiro_1_A_CapF
-\; 075 Pandeiro_1_B_CapF \; 076 Pandeiro_2_A_CapF \; 077 Pandeiro_2_B_CapF
-\; 078 Agogo_A_CapSlow \; 079 Agogo_B_CapSlow \; 080 Atabaque_1_A_CapSlow
-\; 081 Atabaque_1_B_CapSlow \; 082 Atabaque_2_A_CapSlow \; 083 Atabaque_2_B_CapSlow
-\; 084 Berimbau_High_A_CapSlow \; 085 Berimbau_High_B_CapSlow \; 086 Berimbau_Low_A_CapSlow
-\; 087 Berimbau_Low_B_CapSlow \; 088 Berimbau_Mid_A_CapSlow \; 089 Berimbau_Mid_B_CapSlow
-\; 090 Pandeiro_1_A_CapSlow \; 091 Pandeiro_1_B_CapSlow \; 092 Pandeiro_2_A_CapSlow
-\; 093 Pandeiro_2_B_CapSlow \; 094 Ganza_Duro \; 095 Repenique_A_Duro
-\; 096 Repenique_B_Duro \; 097 Repenique_C_Duro \; 098 Snare_Duro \;
-099 Surdo_Hi_Duro \; 100 Surdo_LoLo_Duro \; 101 Surdo_Low_Duro \; 102 Surdo_Mid_Duro
-\; 103 Tamborim_Duro \; 104 Timbao_A_Duro \; 105 Timbao_B_Duro \; 106 Pandeiro_Frevo
-\; 107 Snare_1_Frevo \; 108 Snare_2_Frevo \; 109 Snare_3_Frevo \; 110 Surdo_1_Frevo
-\; 111 Surdo_2_A_Frevo \; 112 Surdo_2_B_Frevo \; 113 Tamborim_Frevo
+#A set 0 Unassigned \; 1 Afoxe Afoxe \; 2 Agogo 1 A Afoxe \; 3 Agogo
+2 A Afoxe \; 4 Agogo 2 B Afoxe \; 5 Agogo 3 A Afoxe \; 6 Agogo 3 B
+Afoxe \; 7 Le 1 A Afoxe \; 8 Le 1 B Afoxe \; 9 Le 2 A Afoxe \; 10 Le
+2 B Afoxe \; 11 Rum A Afoxe \; 12 Rum B Afoxe \; 13 Rumbi A Afoxe \;
+14 Rumbi B Afoxe \; 15 Shekere 1 A Afoxe \; 16 Shekere 1 B Afoxe \;
+17 Shekere 2 Afoxe \; 18 Surdo A Afoxe \; 19 Surdo B Afoxe \; 20 Agogo
+Afro \; 21 Alfaia Afro \; 22 Bell Afro \; 23 Caxixi 1 Afro \; 24 Caxixi
+2 Afro \; 25 Le Vase A Afro \; 26 Le Vase B Afro \; 27 Rum Baravento
+A Afro \; 28 Rum Baravento B Afro \; 29 Rum Vase A Afro \; 30 Rum Vase
+B Afro \; 31 Rumpi Baravento A Afro \; 32 Rumpi Baravento B Afro \;
+33 Rumpi Vase A Afro \; 34 Rumpi Vase B Afro \; 35 Surdo Afro \; 36
+Agogo A Batu \; 37 Agogo B Batu \; 38 Apito A Batu \; 39 Apito B Batu
+\; 40 Caixa Batu \; 41 Ganza 1 A Batu \; 42 Ganza 1 B Batu \; 43 Ganza
+2 A Batu \; 44 Ganza 2 B Batu \; 45 Pandeiro A Batu \; 46 Pandeiro
+B Batu \; 47 Rebolo A Batu \; 48 Rebolo B Batu \; 49 Reco A Batu \;
+50 Reco B Batu \; 51 Repenique A Batu \; 52 Repenique B Batu \; 53
+Repique Mao A Batu \; 54 Repique Mao B Batu \; 55 Rocar A Batu \; 56
+Rocar B Batu \; 57 Surdo 1 Batu \; 58 Surdo 2 Batu \; 59 Surdo 3 Batu
+\; 60 Tamborim A Batu \; 61 Tamborim B Batu \; 62 Tan Tan Batu \; 63
+Agogo A CapFast \; 64 Agogo B CapFast \; 65 Atabaque 1 A CapFast \;
+66 Atabaque 1 B CapFast \; 67 Atabaque 2 A CapFast \; 68 Atabaque 2
+B CapFast \; 69 Berimbau High A CapFast \; 70 Berimbau High B CapFast
+\; 71 Berimbau Low A CapFast \; 72 Berimbau Low B CapFast \; 73 Berimbau
+Mid A CapFast \; 74 Berimbau Mid B CapFast \; 75 Pandeiro 1 A CapFast
+\; 76 Pandeiro 1 B CapFast \; 77 Pandeiro 2 A CapFast \; 78 Pandeiro
+2 B CapFast \; 79 Agogo A CapSlow \; 80 Agogo B CapSlow \; 81 Atabaque
+1 A CapSlow \; 82 Atabaque 1 B CapSlow \; 83 Atabaque 2 A CapSlow \;
+84 Atabaque 2 B CapSlow \; 85 Berimbau High A CapSlow \; 86 Berimbau
+High B CapSlow \; 87 Berimbau Low A CapSlow \; 88 Berimbau Low B CapSlow
+\; 89 Berimbau Mid A CapSlow \; 90 Berimbau Mid B CapSlow \; 91 Pandeiro
+1 A CapSlow \; 92 Pandeiro 1 B CapSlow \; 93 Pandeiro 2 A CapSlow \;
+94 Pandeiro 2 B CapSlow \; 95 Ganza Duro \; 96 Repenique A Duro \;
+97 Repenique B Duro \; 98 Repenique C Duro \; 99 Snare Duro \; 100
+Surdo Hi Duro \; 101 Surdo LoLo Duro \; 102 Surdo Low Duro \; 103 Surdo
+Mid Duro \; 104 Tamborim Duro \; 105 Timbao A Duro \; 106 Timbao B
+Duro \; 107 Pandeiro Frevo \; 108 Snare 1 Frevo \; 109 Snare 2 Frevo
+\; 110 Snare 3 Frevo \; 111 Surdo 1 Frevo \; 112 Surdo 2 A Frevo \;
+113 Surdo 2 B Frevo \; 114 Tamborim Frevo \; 115 Unassigned \; 116
+Unassigned \; 117 Unassigned \; 118 Unassigned \; 119 Unassigned \;
+120 Unassigned \; 121 Unassigned \; 122 Unassigned \; 123 Unassigned
+\; 124 Unassigned \; 125 Unassigned \; 126 Unassigned \; 127 Unassigned
 \;;
-#X obj 289 209 tof/pmenu 1 1 LightGreen black red;
+#X obj 289 255 tof/pmenu 1 1 LightGreen black red;
 #X obj 289 151 text sequence instr-\$1-\$2;
 #X msg 289 122 line 0 \, bang;
 #X obj 289 66 t b b;
@@ -61,35 +67,36 @@
 -1;
 #X obj 577 95 t b b s b;
 #X msg 617 165 read -c ../data/\$1.txt;
-#X obj 457 245 print;
 #X obj 416 25 loadbang;
 #X obj 386 27 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X msg 416 54 max_column_height 40;
-#X connect 0 0 10 0;
-#X connect 0 0 16 0;
-#X connect 1 0 16 0;
-#X connect 2 0 13 0;
-#X connect 3 0 13 0;
-#X connect 4 0 3 0;
-#X connect 10 0 9 0;
-#X connect 11 0 13 0;
-#X connect 13 1 8 0;
-#X connect 13 1 23 0;
-#X connect 14 0 2 0;
+#X msg 289 227 add \$1;
+#X obj 289 192 easyflow/listToSymbol;
+#X connect 0 0 9 0;
+#X connect 0 0 15 0;
+#X connect 1 0 15 0;
+#X connect 2 0 12 0;
+#X connect 3 0 2 0;
+#X connect 9 0 8 0;
+#X connect 10 0 12 0;
+#X connect 12 1 7 0;
+#X connect 13 0 26 0;
+#X connect 14 0 13 0;
 #X connect 15 0 14 0;
-#X connect 16 0 15 0;
-#X connect 16 1 11 0;
-#X connect 17 0 12 0;
-#X connect 18 0 12 0;
-#X connect 19 0 20 0;
-#X connect 19 0 21 0;
-#X connect 21 0 16 0;
-#X connect 21 1 17 0;
-#X connect 21 2 22 0;
-#X connect 21 3 18 0;
-#X connect 22 0 12 0;
-#X connect 24 0 26 0;
-#X connect 25 0 26 0;
-#X connect 26 0 13 0;
+#X connect 15 1 10 0;
+#X connect 16 0 11 0;
+#X connect 17 0 11 0;
+#X connect 18 0 19 0;
+#X connect 18 0 20 0;
+#X connect 20 0 15 0;
+#X connect 20 1 16 0;
+#X connect 20 2 21 0;
+#X connect 20 3 17 0;
+#X connect 21 0 11 0;
+#X connect 22 0 24 0;
+#X connect 23 0 24 0;
+#X connect 24 0 12 0;
+#X connect 25 0 12 0;
+#X connect 26 0 25 0;
 #X coords 0 -1 1 1 204 24 2 20 20;
