@@ -11,51 +11,25 @@
 7 0 10 -257985 -1 -1;
 #X obj 524 281 send instr-\$1-\$2-r;
 #X obj 126 108 send instr-\$1-\$2-r;
-#X obj 126 84 symbol 00_Unassigned;
 #X msg 335 93 clear;
 #X obj 597 196 text define -k instr-\$1-\$2;
-#A set 0 Unassigned \; 1 Afoxe Afoxe \; 2 Agogo 1 A Afoxe \; 3 Agogo
-2 A Afoxe \; 4 Agogo 2 B Afoxe \; 5 Agogo 3 A Afoxe \; 6 Agogo 3 B
-Afoxe \; 7 Le 1 A Afoxe \; 8 Le 1 B Afoxe \; 9 Le 2 A Afoxe \; 10 Le
-2 B Afoxe \; 11 Rum A Afoxe \; 12 Rum B Afoxe \; 13 Rumbi A Afoxe \;
-14 Rumbi B Afoxe \; 15 Shekere 1 A Afoxe \; 16 Shekere 1 B Afoxe \;
-17 Shekere 2 Afoxe \; 18 Surdo A Afoxe \; 19 Surdo B Afoxe \; 20 Agogo
-Afro \; 21 Alfaia Afro \; 22 Bell Afro \; 23 Caxixi 1 Afro \; 24 Caxixi
-2 Afro \; 25 Le Vase A Afro \; 26 Le Vase B Afro \; 27 Rum Baravento
-A Afro \; 28 Rum Baravento B Afro \; 29 Rum Vase A Afro \; 30 Rum Vase
-B Afro \; 31 Rumpi Baravento A Afro \; 32 Rumpi Baravento B Afro \;
-33 Rumpi Vase A Afro \; 34 Rumpi Vase B Afro \; 35 Surdo Afro \; 36
-Agogo A Batu \; 37 Agogo B Batu \; 38 Apito A Batu \; 39 Apito B Batu
-\; 40 Caixa Batu \; 41 Ganza 1 A Batu \; 42 Ganza 1 B Batu \; 43 Ganza
-2 A Batu \; 44 Ganza 2 B Batu \; 45 Pandeiro A Batu \; 46 Pandeiro
-B Batu \; 47 Rebolo A Batu \; 48 Rebolo B Batu \; 49 Reco A Batu \;
-50 Reco B Batu \; 51 Repenique A Batu \; 52 Repenique B Batu \; 53
-Repique Mao A Batu \; 54 Repique Mao B Batu \; 55 Rocar A Batu \; 56
-Rocar B Batu \; 57 Surdo 1 Batu \; 58 Surdo 2 Batu \; 59 Surdo 3 Batu
-\; 60 Tamborim A Batu \; 61 Tamborim B Batu \; 62 Tan Tan Batu \; 63
-Agogo A CapFast \; 64 Agogo B CapFast \; 65 Atabaque 1 A CapFast \;
-66 Atabaque 1 B CapFast \; 67 Atabaque 2 A CapFast \; 68 Atabaque 2
-B CapFast \; 69 Berimbau High A CapFast \; 70 Berimbau High B CapFast
-\; 71 Berimbau Low A CapFast \; 72 Berimbau Low B CapFast \; 73 Berimbau
-Mid A CapFast \; 74 Berimbau Mid B CapFast \; 75 Pandeiro 1 A CapFast
-\; 76 Pandeiro 1 B CapFast \; 77 Pandeiro 2 A CapFast \; 78 Pandeiro
-2 B CapFast \; 79 Agogo A CapSlow \; 80 Agogo B CapSlow \; 81 Atabaque
-1 A CapSlow \; 82 Atabaque 1 B CapSlow \; 83 Atabaque 2 A CapSlow \;
-84 Atabaque 2 B CapSlow \; 85 Berimbau High A CapSlow \; 86 Berimbau
-High B CapSlow \; 87 Berimbau Low A CapSlow \; 88 Berimbau Low B CapSlow
-\; 89 Berimbau Mid A CapSlow \; 90 Berimbau Mid B CapSlow \; 91 Pandeiro
-1 A CapSlow \; 92 Pandeiro 1 B CapSlow \; 93 Pandeiro 2 A CapSlow \;
-94 Pandeiro 2 B CapSlow \; 95 Ganza Duro \; 96 Repenique A Duro \;
-97 Repenique B Duro \; 98 Repenique C Duro \; 99 Snare Duro \; 100
-Surdo Hi Duro \; 101 Surdo LoLo Duro \; 102 Surdo Low Duro \; 103 Surdo
-Mid Duro \; 104 Tamborim Duro \; 105 Timbao A Duro \; 106 Timbao B
-Duro \; 107 Pandeiro Frevo \; 108 Snare 1 Frevo \; 109 Snare 2 Frevo
-\; 110 Snare 3 Frevo \; 111 Surdo 1 Frevo \; 112 Surdo 2 A Frevo \;
-113 Surdo 2 B Frevo \; 114 Tamborim Frevo \; 115 Unassigned \; 116
-Unassigned \; 117 Unassigned \; 118 Unassigned \; 119 Unassigned \;
-120 Unassigned \; 121 Unassigned \; 122 Unassigned \; 123 Unassigned
-\; 124 Unassigned \; 125 Unassigned \; 126 Unassigned \; 127 Unassigned
-\;;
+#A set 0 Unassigned \; 27 High Q \; 28 Slap \; 29 Scratch Push \; 30
+Scratch Pull \; 31 Sticks \; 32 Square Click \; 33 Metronome Click
+\; 34 Metronome Bell \; 35 Acoustic Bass Drum \; 36 Electric Bass Drum
+\; 37 Side Stick \; 38 Acoustic Snare \; 39 Hand Clap \; 40 Electric
+Snare \; 41 Low Floor Tom \; 42 Closed Hi-hat \; 43 High Floor Tom
+\; 44 Pedal Hi-hat \; 45 Low Tom \; 46 Open Hi-hat \; 47 Low-Mid Tom
+\; 48 Hi-Mid Tom \; 49 Crash Cymbal 1 \; 50 High Tom \; 51 Ride Cymbal
+1 \; 52 Chinese Cymbal \; 53 Ride Bell \; 54 Tambourine \; 55 Splash
+Cymbal \; 56 Cowbell \; 57 Crash Cymbal 2 \; 58 Vibra Slap \; 59 Ride
+Cymbal 2 \; 60 High Bongo \; 61 Low Bongo \; 62 Mute High Conga \;
+63 Open High Conga \; 64 Low Conga \; 65 High Timbale \; 66 Low Timbale
+\; 67 High Agogo \; 68 Low Agogo \; 69 Cabasa \; 70 Maracas \; 71 Short
+Whistle \; 72 Long Whistle \; 73 Short Guiro \; 74 Long Guiro \; 75
+Claves \; 76 High Woodblock \; 77 Low Woodblock \; 78 Mute Cuica \;
+79 Open Cuica \; 80 Mute Triangle \; 81 Open Triangle \; 82 Shaker
+\; 83 Jingle Bell \; 84 Belltree \; 85 Castanets \; 86 Mute Surdo \;
+87 Open Surdo \;;
 #X obj 289 255 tof/pmenu 1 1 LightGreen black red;
 #X obj 289 151 text sequence instr-\$1-\$2;
 #X msg 289 122 line 0 \, bang;
@@ -73,30 +47,31 @@ Unassigned \; 117 Unassigned \; 118 Unassigned \; 119 Unassigned \;
 #X msg 416 54 max_column_height 40;
 #X msg 289 227 add \$1;
 #X obj 289 192 easyflow/listToSymbol;
-#X connect 0 0 9 0;
-#X connect 0 0 15 0;
-#X connect 1 0 15 0;
-#X connect 2 0 12 0;
+#X obj 126 84 symbol 0_Unassigned;
+#X connect 0 0 14 0;
+#X connect 0 0 26 0;
+#X connect 1 0 14 0;
+#X connect 2 0 11 0;
 #X connect 3 0 2 0;
-#X connect 9 0 8 0;
-#X connect 10 0 12 0;
-#X connect 12 1 7 0;
-#X connect 13 0 26 0;
+#X connect 9 0 11 0;
+#X connect 11 1 7 0;
+#X connect 12 0 25 0;
+#X connect 13 0 12 0;
 #X connect 14 0 13 0;
-#X connect 15 0 14 0;
-#X connect 15 1 10 0;
-#X connect 16 0 11 0;
-#X connect 17 0 11 0;
-#X connect 18 0 19 0;
-#X connect 18 0 20 0;
-#X connect 20 0 15 0;
-#X connect 20 1 16 0;
-#X connect 20 2 21 0;
-#X connect 20 3 17 0;
-#X connect 21 0 11 0;
-#X connect 22 0 24 0;
-#X connect 23 0 24 0;
-#X connect 24 0 12 0;
-#X connect 25 0 12 0;
-#X connect 26 0 25 0;
+#X connect 14 1 9 0;
+#X connect 15 0 10 0;
+#X connect 16 0 10 0;
+#X connect 17 0 18 0;
+#X connect 17 0 19 0;
+#X connect 19 0 14 0;
+#X connect 19 1 15 0;
+#X connect 19 2 20 0;
+#X connect 19 3 16 0;
+#X connect 20 0 10 0;
+#X connect 21 0 23 0;
+#X connect 22 0 23 0;
+#X connect 23 0 11 0;
+#X connect 24 0 11 0;
+#X connect 25 0 24 0;
+#X connect 26 0 8 0;
 #X coords 0 -1 1 1 204 24 2 20 20;
