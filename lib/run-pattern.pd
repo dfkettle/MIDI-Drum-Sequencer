@@ -1,4 +1,4 @@
-#N canvas 38 0 654 663 12;
+#N canvas 687 39 654 663 12;
 #X obj 42 25 inlet;
 #X obj 65 165 get-parms \$1;
 #X obj 42 57 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -57,16 +57,17 @@
 #X obj 344 504 f 0;
 #X obj 314 504 f 1;
 #X obj 434 451 receive song-start;
-#X obj 434 572 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 434 543 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 305 580 spigot;
-#X obj 467 486 receive song-stop;
-#X obj 467 515 f 0;
-#X obj 434 515 f 1;
+#X obj 467 480 receive song-stop;
+#X obj 467 509 f 0;
+#X obj 434 509 f 1;
 #X obj 88 136 send run-state-\$1;
+#X obj 467 543 send run-state-\$1-r;
 #X connect 0 0 2 0;
+#X connect 0 0 13 0;
 #X connect 1 0 7 0;
-#X connect 2 0 13 0;
 #X connect 2 0 36 0;
 #X connect 2 0 47 0;
 #X connect 3 0 9 1;
@@ -124,4 +125,6 @@
 #X connect 50 0 12 0;
 #X connect 51 0 52 0;
 #X connect 52 0 49 0;
+#X connect 52 0 55 0;
 #X connect 53 0 49 0;
+#X connect 53 0 55 0;
