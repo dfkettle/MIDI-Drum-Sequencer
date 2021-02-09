@@ -73,8 +73,6 @@
 #X text 58 464 <== save MIDI file;
 #X obj 272 113 pwait 2000;
 #X text 367 363 <== song is finished;
-#X text 32 23 Drum Sequencer v0.3a \; Copyright (c) 2021 \; David Kettle
-;
 #N canvas 0 50 450 300 msg-log 0;
 #X obj 27 18 receive msg-log-r;
 #X obj 59 87 unpack s s;
@@ -93,6 +91,8 @@
 #X connect 5 0 3 0;
 #X connect 5 1 1 0;
 #X restore 28 396 pd msg-log;
+#X text 32 23 Drum Sequencer v0.4 \; Copyright (c) 2021 \; David Kettle
+;
 #X connect 7 0 10 0;
 #X connect 8 0 7 0;
 #X connect 9 0 18 0;
