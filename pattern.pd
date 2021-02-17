@@ -1,4 +1,4 @@
-#N canvas 97 243 1114 512 12;
+#N canvas 284 219 1114 512 12;
 #X obj 8 165 select-instrument \$0 0;
 #X obj 8 205 select-instrument \$0 1;
 #X obj 8 245 select-instrument \$0 2;
@@ -8,21 +8,21 @@
 #X obj 8 405 select-instrument \$0 6;
 #X obj 8 445 select-instrument \$0 7;
 #X obj 265 24 nbx 5 20 1 500 0 0 \$0-tempo-s \$0-tempo-r Tempo 0 -8
-0 10 -232576 -1 -1 90 256;
+0 10 -232576 -1 -1 60 256;
 #X obj 265 76 nbx 5 20 1 16 0 0 \$0-channel-s \$0-channel-r Channel
 0 -8 0 10 -232576 -1 -1 10 256;
 #X obj 342 24 nbx 5 20 1 32 0 0 \$0-steps-s \$0-steps-r Length 0 -8
-0 10 -232576 -1 -1 32 256;
+0 10 -232576 -1 -1 16 256;
 #X obj 342 76 nbx 5 20 1 127 0 0 \$0-level-1-s \$0-level-1-r Accent_1
-0 -8 0 10 -232576 -1 -1 61 256;
+0 -8 0 10 -232576 -1 -1 60 256;
 #X obj 419 76 nbx 5 20 1 127 0 0 \$0-level-2-s \$0-level-2-r Accent_2
-0 -8 0 10 -232576 -1 -1 82 256;
+0 -8 0 10 -232576 -1 -1 80 256;
 #X obj 498 76 nbx 5 20 1 127 0 0 \$0-level-3-s \$0-level-3-r Accent_3
-0 -8 0 10 -232576 -1 -1 105 256;
+0 -8 0 10 -232576 -1 -1 100 256;
 #X obj 575 76 nbx 5 20 1 127 0 0 \$0-level-4-s \$0-level-4-r Accent_4
-0 -8 0 10 -232576 -1 -1 127 256;
+0 -8 0 10 -232576 -1 -1 120 256;
 #X obj 419 24 nbx 5 20 1 1000 0 0 \$0-repeat-s \$0-repeat-r Repeat
-0 -8 0 10 -232576 -1 -1 2 256;
+0 -8 0 10 -232576 -1 -1 60 256;
 #X obj 975 70 outlet end;
 #X obj 975 18 inlet begin;
 #X obj 51 35 save-state \$0;
@@ -286,7 +286,7 @@
 #X obj 823 18 loadbang;
 #X obj 823 70 send \$0-load-patch;
 #X obj 495 24 nbx 5 20 1 32 0 0 \$0-beat-len-s \$0-beat-len-r Steps/Beat
-0 -8 0 10 -232576 -1 -1 4 256;
+0 -8 0 10 -232576 -1 -1 16 256;
 #X obj 975 44 run-pattern \$0 \$1;
 #X obj 14 16 pattern-name \$1 \$0;
 #X obj 224 205 single-toggle \$0 1;
@@ -346,6 +346,8 @@
 #X obj 93 35 clear-state \$0;
 #X obj 9 109 select-drumkit \$0;
 #X text 34 89 Drum Kit:;
+#X obj 211 476 loop-count \$0;
+#X text 173 482 LOOP:;
 #X connect 17 0 279 0;
 #X connect 275 0 277 0;
 #X connect 276 0 275 0;
