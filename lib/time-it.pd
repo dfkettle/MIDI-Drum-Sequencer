@@ -1,0 +1,12 @@
+#N canvas 233 329 450 300 12;
+#X obj 34 27 inlet;
+#X obj 88 105 realtime;
+#X obj 34 135 pack f f;
+#X obj 34 63 t f b b;
+#X obj 34 163 print \$1;
+#X connect 0 0 3 0;
+#X connect 1 0 2 1;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 3 1 1 0;
+#X connect 3 2 1 1;

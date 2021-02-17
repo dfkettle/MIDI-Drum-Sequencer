@@ -1,4 +1,4 @@
-#N canvas 746 452 473 213 12;
+#N canvas 887 271 473 213 12;
 #X obj 36 30 inlet;
 #X text 88 29 <== send bang to inlet;
 #X obj 68 110 f 123;

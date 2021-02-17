@@ -1,18 +1,18 @@
-#N canvas 757 312 516 452 12;
+#N canvas 756 349 516 452 12;
 #X obj 20 302 outlet;
 #X obj 20 279 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 219 301 noteout;
+#X obj 219 336 noteout;
 #X obj 60 153 print send-note;
 #X obj 60 129 spigot;
-#X obj 99 94 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
-#X obj 275 209 f;
-#X obj 208 209 f;
-#X floatatom 208 235 3 0 0 3 Note - -;
-#X floatatom 241 235 3 0 0 3 Vel - -;
-#X floatatom 275 235 3 0 0 3 Chan - -;
-#X obj 208 126 unpack f f f;
+#X obj 99 94 tgl 15 0 empty empty <--debug 17 7 0 10 -257985 -1 -1
+1 1;
+#X obj 275 244 f;
+#X obj 208 244 f;
+#X floatatom 208 270 3 0 0 3 Note - -;
+#X floatatom 241 270 3 0 0 3 Vel - -;
+#X floatatom 275 270 3 0 0 3 Chan - -;
+#X obj 208 161 unpack f f f;
 #X obj 20 20 inlet;
 #X text 64 19 <== (note vel chan);
 #X obj 323 371 cyclone/midiformat;
@@ -28,10 +28,13 @@
 #X obj 390 126 unpack f f f;
 #X obj 390 156 t f b b;
 #X obj 208 61 t l l;
-#X text 215 103 Note Off:;
+#X text 215 138 Note Off:;
 #X text 396 103 Note On:;
-#X obj 208 183 delay 5000;
-#X obj 208 155 t f f b b;
+#X obj 208 112 spigot;
+#X obj 247 93 tgl 15 0 empty empty <--send_note-off 17 7 0 10 -257985
+-1 -1 1 1;
+#X obj 208 190 t b f b b;
+#X obj 208 218 delay 50;
 #X connect 1 0 0 0;
 #X connect 4 0 3 0;
 #X connect 5 0 4 1;
@@ -43,7 +46,7 @@
 #X connect 9 0 15 1;
 #X connect 10 0 2 2;
 #X connect 10 0 14 6;
-#X connect 11 0 30 0;
+#X connect 11 0 31 0;
 #X connect 11 2 6 1;
 #X connect 12 0 1 0;
 #X connect 12 0 4 0;
@@ -65,9 +68,12 @@
 #X connect 25 0 20 0;
 #X connect 25 1 18 0;
 #X connect 25 2 19 0;
+#X connect 26 0 29 0;
 #X connect 26 1 24 0;
-#X connect 29 0 7 0;
-#X connect 30 0 7 1;
-#X connect 30 0 29 0;
-#X connect 30 2 9 0;
-#X connect 30 3 6 0;
+#X connect 29 0 11 0;
+#X connect 30 0 29 1;
+#X connect 31 0 32 0;
+#X connect 31 1 7 1;
+#X connect 31 2 9 0;
+#X connect 31 3 6 0;
+#X connect 32 0 7 0;

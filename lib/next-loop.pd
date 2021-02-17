@@ -1,8 +1,8 @@
-#N canvas 7 186 635 576 12;
-#X obj 138 530 outlet;
+#N canvas 94 34 635 659 12;
+#X obj 138 475 outlet;
 #X obj 43 53 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 43 530 next-step \$1;
+#X obj 43 596 next-step \$1;
 #X obj 107 120 get-parms \$1;
 #X floatatom 152 301 3 0 0 1 STEPS/BEAT - -;
 #X floatatom 130 252 3 0 0 1 STEPS - -;
@@ -10,25 +10,25 @@
 #X obj 107 144 t l l l;
 #X obj 107 333 /;
 #X floatatom 107 356 5 0 0 1 MS/STEP - -;
-#X obj 74 448 - 1;
+#X obj 74 404 - 1;
 #X obj 43 22 inlet loop;
 #X obj 175 85 print next-loop;
 #X obj 107 178 get-parm 1;
 #X obj 130 230 get-parm 3;
 #X obj 152 280 get-parm 5;
-#X obj 43 492 for++ 0 31 0 1;
+#X obj 43 448 for++ 0 31 0 1;
 #X obj 175 59 spigot;
 #X obj 214 28 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 233 25 <== debug;
 #X msg 320 148 stop;
-#X floatatom 328 357 5 0 0 1 STEP - -;
-#X msg 413 267 stop;
-#X obj 328 328 float 0;
-#X obj 367 401 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X floatatom 328 329 5 0 0 1 STEP - -;
+#X msg 413 239 stop;
+#X obj 328 300 float 0;
+#X obj 367 373 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 328 432 spigot;
-#X obj 367 240 t b b b;
+#X obj 328 404 spigot;
+#X obj 367 212 t b b b;
 #X obj 441 149 print next-loop Error;
 #X obj 320 86 select 0 1 2 3;
 #X msg 391 148 stop;
@@ -45,6 +45,11 @@
 #X obj 415 116 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 320 59 receive run-state-\$1-r;
+#X obj 75 531 spigot;
+#X obj 114 502 tgl 15 0 empty empty <--debug 17 7 0 10 -257985 -1 -1
+0 1;
+#X obj 43 500 t f f;
+#X obj 75 568 time-it next-loop;
 #X connect 1 0 30 0;
 #X connect 3 0 7 0;
 #X connect 4 0 8 1;
@@ -61,8 +66,8 @@
 #X connect 13 0 6 0;
 #X connect 14 0 5 0;
 #X connect 15 0 4 0;
-#X connect 16 0 2 0;
 #X connect 16 0 21 0;
+#X connect 16 0 40 0;
 #X connect 16 1 0 0;
 #X connect 16 1 23 0;
 #X connect 17 0 12 0;
@@ -90,3 +95,7 @@
 #X connect 35 0 29 0;
 #X connect 36 0 27 0;
 #X connect 37 0 28 0;
+#X connect 38 0 41 0;
+#X connect 39 0 38 1;
+#X connect 40 0 2 0;
+#X connect 40 1 38 0;

@@ -28,9 +28,9 @@
 #X obj 209 403 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 7 17 nbx 6 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
--258113 -1 -1 -1 256;
+-258113 -1 -1 0 256;
 #X obj 7 17 nbx 6 20 -1e+037 1e+037 0 0 \$1-duration-s \$1-duration-r
-Duration 0 -8 0 10 -204786 -1 -1 0 256;
+Duration 0 -8 0 10 -204786 -1 -1 10 256;
 #X connect 1 0 11 0;
 #X connect 2 0 1 0;
 #X connect 3 0 12 1;

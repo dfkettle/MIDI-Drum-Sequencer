@@ -1,7 +1,7 @@
 #N canvas 164 239 417 221 12;
 #X obj 5 5 cnv 15 20 20 empty empty empty 20 12 0 14 -262144 -66577
 0;
-#X obj 9 9 bng 12 250 50 0 led-\$1-\$2-s led-\$1-\$2-r empty 17 7 0
+#X obj 9 9 bng 12 80 50 0 led-\$1-\$2-s led-\$1-\$2-r empty 17 7 0
 10 -262144 -258113 -1;
 #X obj 85 34 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -258113
 -1;

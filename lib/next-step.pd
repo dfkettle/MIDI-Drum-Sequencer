@@ -1,6 +1,6 @@
-#N canvas 167 218 316 456 12;
-#X obj 30 409 next-instrument \$1;
-#X obj 162 278 outlet;
+#N canvas 585 129 327 555 12;
+#X obj 30 512 next-instrument \$1;
+#X obj 158 317 outlet;
 #X obj 30 101 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 30 211 for++ 0 7 0 1;
@@ -12,16 +12,25 @@
 #X obj 53 326 == 0;
 #X obj 30 381 spigot;
 #X obj 53 296 get-mute \$1;
-#X obj 99 95 f \$1;
-#X obj 99 119 pack f f;
-#X msg 99 144 \; led-\$1-\$2-r 1;
+#X obj 165 201 f \$1;
+#X obj 165 225 pack f f;
+#X msg 165 250 \; led-\$1-\$2-r 1;
 #X obj 30 60 t f f b f;
-#X obj 73 100 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 70 100 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 170 80 print next-step;
 #X obj 170 54 spigot;
 #X obj 209 29 tgl 15 0 empty empty DEBUG 20 7 0 10 -262144 -1 -1 0
 1;
+#X obj 62 442 spigot;
+#X obj 101 413 tgl 15 0 empty empty <--debug 17 7 0 10 -257985 -1 -1
+0 1;
+#X obj 30 411 t f f;
+#X obj 62 479 time-it next-step;
+#X obj 165 174 spigot;
+#X obj 204 150 tgl 15 0 empty empty LED_on 17 7 0 10 -4034 -1 -1 0
+1;
+#X obj 204 122 loadbang;
 #X connect 2 0 3 0;
 #X connect 3 0 6 0;
 #X connect 3 1 1 0;
@@ -33,14 +42,21 @@
 #X connect 6 2 10 1;
 #X connect 7 0 9 1;
 #X connect 8 0 7 0;
-#X connect 9 0 0 0;
+#X connect 9 0 21 0;
 #X connect 10 0 8 0;
 #X connect 11 0 12 0;
 #X connect 12 0 13 0;
 #X connect 14 0 2 0;
 #X connect 14 1 0 1;
-#X connect 14 2 11 0;
 #X connect 14 2 15 0;
+#X connect 14 2 23 0;
 #X connect 14 3 12 1;
 #X connect 17 0 16 0;
 #X connect 18 0 17 1;
+#X connect 19 0 22 0;
+#X connect 20 0 19 1;
+#X connect 21 0 0 0;
+#X connect 21 1 19 0;
+#X connect 23 0 11 0;
+#X connect 24 0 23 1;
+#X connect 25 0 24 0;
