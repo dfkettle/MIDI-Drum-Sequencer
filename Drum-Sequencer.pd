@@ -1,22 +1,22 @@
-#N canvas 709 59 736 524 12;
+#N canvas 511 80 736 524 12;
 #X declare -lib tof;
 #X declare -lib cyclone;
-#X declare -lib ggee;
 #X declare -lib zexy;
 #X declare -lib iemlib;
 #X declare -lib easyflow;
 #X declare -path lib;
+#X declare -lib else;
 #X obj 10 8 cnv 15 200 500 empty empty empty 20 12 0 14 -204800 -66577
 0;
 #N canvas 802 190 362 245 libraries 0;
 #X obj 29 52 declare -lib tof;
 #X obj 29 79 declare -lib cyclone;
 #X text 28 22 Dependencies:;
-#X obj 29 106 declare -lib ggee;
 #X obj 29 133 declare -lib zexy;
 #X obj 29 160 declare -lib iemlib;
 #X obj 29 187 declare -lib easyflow;
 #X obj 210 52 declare -path lib;
+#X obj 29 106 declare -lib else;
 #X restore 28 423 pd libraries;
 #X text 28 371 Do not delete:;
 #X obj 93 124 song-start;
